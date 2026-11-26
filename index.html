@@ -4,186 +4,50 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Happiest Man Alive</title>
-<meta name="description" content="The Happiest Man Alive: the story, the smile, and the simple joys of a man who loves life.">
+<meta name="description" content="The Happiest Man Alive. Official merch.">
 <meta property="og:title" content="The Happiest Man Alive">
-<meta property="og:description" content="The story, the smile, and the simple joys of a man who loves life.">
+<meta property="og:description" content="Official merch from The Happiest Man Alive.">
 <meta property="og:image" content="https://thehappiestmanalive.com/logo.png">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --midnight:#0b1733;
-    --midnight-2:#13224a;
-    --blue:#2f6bff;
-    --sky:#7fb0ff;
-    --white:#ffffff;
-    --cream:#f6f8ff;
-    --ink:#0b1733;
-    --muted:#5a6788;
-  }
+  :root{--midnight:#0b1733;--midnight-2:#13224a;--blue:#2f6bff;--sky:#7fb0ff}
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:Montserrat,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}
-  img{max-width:100%;display:block}
-  a{color:inherit}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-
-  /* nav */
-  nav{position:sticky;top:0;z-index:10;background:rgba(11,23,51,.92);backdrop-filter:blur(8px)}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-  nav .brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;letter-spacing:.12em;font-size:.8rem;text-transform:uppercase}
-  nav .brand img{width:38px;height:38px;border-radius:50%}
-  nav ul{display:flex;gap:26px;list-style:none}
-  nav ul a{color:#cfe0ff;text-decoration:none;font-weight:600;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}
-  nav ul a:hover{color:#fff}
-  @media (max-width:640px){nav ul{display:none}}
-
-  /* hero */
-  .hero{background:radial-gradient(circle at 50% 35%, var(--midnight-2), var(--midnight) 70%);color:#fff;text-align:center;padding:70px 0 90px;overflow:hidden;position:relative}
-  .hero img.logo{width:min(380px,78vw);margin:0 auto 28px;border-radius:50%;box-shadow:0 0 0 10px rgba(47,107,255,.12),0 30px 80px rgba(0,0,0,.45);animation:float 6s ease-in-out infinite}
+  html,body{height:100%}
+  body{
+    font-family:Montserrat,system-ui,sans-serif;color:#fff;
+    background:radial-gradient(circle at 50% 38%,var(--midnight-2),var(--midnight) 70%);
+    background-color:var(--midnight);
+    min-height:100vh;display:flex;flex-direction:column;
+  }
+  main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 20px}
+  .logo{width:min(420px,80vw);border-radius:50%;margin-bottom:36px;
+    box-shadow:0 0 0 12px rgba(47,107,255,.12),0 30px 90px rgba(0,0,0,.5);
+    animation:float 6s ease-in-out infinite}
   @keyframes float{50%{transform:translateY(-10px)}}
-  @media (prefers-reduced-motion:reduce){.hero img.logo{animation:none}}
-  .hero h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:800;letter-spacing:.06em;text-transform:uppercase;line-height:1.1}
-  .hero p{font-family:Lora,serif;font-style:italic;font-size:clamp(1.1rem,2.6vw,1.4rem);color:#cfe0ff;margin:16px auto 32px;max-width:620px}
-  .btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;padding:14px 30px;border-radius:999px;letter-spacing:.05em;transition:transform .15s,background .15s}
+  @media (prefers-reduced-motion:reduce){.logo{animation:none}}
+  h1{font-size:clamp(1.9rem,6vw,3.4rem);font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1.1}
+  p{color:#cfe0ff;font-size:clamp(1rem,2.4vw,1.2rem);font-weight:500;margin:14px 0 34px;letter-spacing:.04em}
+  .btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:800;
+    font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;padding:18px 44px;border-radius:999px;
+    box-shadow:0 10px 30px rgba(47,107,255,.4);transition:transform .15s,background .15s}
   .btn:hover{background:#4a7fff;transform:translateY(-2px)}
-  .dots{display:flex;justify-content:center;gap:10px;margin-top:40px}
-  .dots span{width:10px;height:10px;border-radius:50%;background:var(--sky);opacity:.7}
-
-  section{padding:90px 0}
-  .eyebrow{color:var(--blue);font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;margin-bottom:10px}
-  h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800;line-height:1.2;margin-bottom:22px}
-
-  /* story */
-  .story .grid{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center}
-  .photo{aspect-ratio:4/5;border-radius:24px;background:linear-gradient(160deg,var(--blue),var(--midnight));display:flex;align-items:center;justify-content:center;color:#cfe0ff;font-weight:600;text-align:center;padding:20px;overflow:hidden}
-  .photo img{width:100%;height:100%;object-fit:cover}
-  .story p{color:var(--muted);margin-bottom:16px;font-size:1.05rem}
-  .story blockquote{font-family:Lora,serif;font-style:italic;font-size:1.3rem;border-left:4px solid var(--blue);padding-left:18px;margin-top:24px;color:var(--ink)}
-  @media (max-width:800px){.story .grid{grid-template-columns:1fr}.photo{max-width:420px}}
-
-  /* joys */
-  .joys{background:var(--midnight);color:#fff}
-  .joys .eyebrow{color:var(--sky)}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:30px}
-  .card{background:var(--midnight-2);border:1px solid rgba(127,176,255,.18);border-radius:20px;padding:28px}
-  .card .icon{font-size:2rem;margin-bottom:12px}
-  .card h3{font-size:1.1rem;margin-bottom:8px}
-  .card p{color:#b8c8ea;font-size:.95rem}
-
-  /* gallery */
-  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
-  .gallery-grid .photo{aspect-ratio:1;border-radius:16px;font-size:.9rem}
-  @media (max-width:640px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
-
-  /* words */
-  .words{background:#fff}
-  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:30px}
-  .quote{background:var(--cream);border-radius:20px;padding:30px}
-  .quote p{font-family:Lora,serif;font-style:italic;font-size:1.1rem;margin-bottom:14px}
-  .quote span{font-weight:700;color:var(--blue);font-size:.9rem}
-
-  /* contact */
-  .contact{text-align:center}
-  .contact p{color:var(--muted);max-width:560px;margin:0 auto 28px}
-
-  footer{background:var(--midnight);color:#9fb3dd;text-align:center;padding:40px 20px;font-size:.85rem}
-  footer img{width:56px;margin:0 auto 12px;border-radius:50%}
+  .dots{display:flex;gap:10px;justify-content:center;margin-top:44px}
+  .dots span{width:9px;height:9px;border-radius:50%;background:var(--sky);opacity:.7}
+  footer{text-align:center;color:#8ea3cf;font-size:.8rem;padding:24px 20px;letter-spacing:.04em}
 </style>
 </head>
 <body>
-
-<nav>
-  <div class="wrap">
-    <a class="brand" href="#top"><img src="logo.png" alt="">The Happiest Man Alive</a>
-    <ul>
-      <li><a href="#story">His Story</a></li>
-      <li><a href="#joys">Joys</a></li>
-      <li><a href="#photos">Photos</a></li>
-      <li><a href="#contact">Say Hi</a></li>
-    </ul>
-  </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="wrap">
-    <img class="logo" src="logo.png" alt="The Happiest Man Alive logo">
-    <h1>The Happiest Man Alive</h1>
-    <p>[DAD'S NAME] proves every day that happiness isn't something you find. It's something you choose.</p>
-    <a class="btn" href="#story">Meet the Man</a>
-    <div class="dots"><span></span><span></span><span></span></div>
-  </div>
-</header>
-
-<section class="story" id="story">
-  <div class="wrap grid">
-    <div class="photo">[Photo of Dad here]</div>
-    <div>
-      <div class="eyebrow">His Story</div>
-      <h2>Meet [DAD'S NAME]</h2>
-      <p>[Where he grew up, what he's done in life, his family. A few sentences about who he is.]</p>
-      <p>[How he earned the title "The Happiest Man Alive." A favorite story that sums him up.]</p>
-      <blockquote>"[His favorite saying or motto goes here.]"</blockquote>
-    </div>
-  </div>
-</section>
-
-<section class="joys" id="joys">
-  <div class="wrap">
-    <div class="eyebrow">What Makes Him Happy</div>
-    <h2>The simple things, every single day</h2>
-    <div class="cards">
-      <div class="card"><div class="icon">👨‍👩‍👧‍👦</div><h3>Family</h3><p>[A line about his family and what they mean to him.]</p></div>
-      <div class="card"><div class="icon">☀️</div><h3>Every Morning</h3><p>[How he starts his day: coffee, a walk, a joke.]</p></div>
-      <div class="card"><div class="icon">🎣</div><h3>[Hobby]</h3><p>[A favorite pastime: fishing, golf, cooking, music.]</p></div>
-      <div class="card"><div class="icon">😄</div><h3>Making People Smile</h3><p>[How he brightens up every room he walks into.]</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="photos">
-  <div class="wrap">
-    <div class="eyebrow">Gallery</div>
-    <h2>Smiles through the years</h2>
-    <div class="gallery-grid">
-      <div class="photo">[Photo]</div>
-      <div class="photo">[Photo]</div>
-      <div class="photo">[Photo]</div>
-      <div class="photo">[Photo]</div>
-      <div class="photo">[Photo]</div>
-      <div class="photo">[Photo]</div>
-    </div>
-  </div>
-</section>
-
-<section class="words">
-  <div class="wrap">
-    <div class="eyebrow">Words From Those Who Love Him</div>
-    <h2>Ask anyone who knows him</h2>
-    <div class="quotes">
-      <div class="quote"><p>"[A sweet or funny quote about Dad.]"</p><span>[Name], [relationship]</span></div>
-      <div class="quote"><p>"[Another quote from family or friends.]"</p><span>[Name], [relationship]</span></div>
-      <div class="quote"><p>"[One more.]"</p><span>[Name], [relationship]</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="eyebrow">Say Hi</div>
-    <h2>Send a little happiness back</h2>
-    <p>Got a story, a photo, or just want to say hello? He'd love to hear from you.</p>
-    <a class="btn" href="mailto:[EMAIL]">Send a Message</a>
-  </div>
-</section>
-
-<footer>
-  <img src="logo.png" alt="">
-  © <span id="yr">2026</span> The Happiest Man Alive · thehappiestmanalive.com
-</footer>
-
+<main>
+  <img class="logo" src="logo.png" alt="The Happiest Man Alive logo">
+  <h1>The Happiest Man Alive</h1>
+  <p>Happiness looks good on you.</p>
+  <a class="btn" href="https://shop.thehappiestmanalive.com">Shop the Merch</a>
+  <div class="dots"><span></span><span></span><span></span></div>
+</main>
+<footer>© <span id="yr">2026</span> The Happiest Man Alive</footer>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>
